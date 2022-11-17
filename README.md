@@ -13,13 +13,26 @@ Download the 6D pose dataset Trans6D-32K
 The structure of `dataset` folder should look like below:
 
 ````
-
-```
 datasets/
-The randomly generated object names are for easier data processing in dataset rendering, 
-and they correspond to numbers #01 to #10 one by one.
+The randomly generated object names are for easier data processing in dataset rendering, and they correspond to numbers #01 to #10 one by one.
 ├── Trans6D-32K 
-    ├──#01(budui1)
+    ├──#01(budui1)                  # Object serial number and corresponding name
+    │  ├─test_2800                  # Test dataset
+    │  │  ├─mask                    # mask
+    │  │  ├─pose                    # pose
+    │  │  └─rgb                     # RGB image
+    │  ├─train
+    │  │  ├─edge                    # edge information
+    │  │  ├─mask                    # mask
+    │  │  ├─pose                    # pose
+    │  │  ├─rgb                     # RGB image
+    │  │  └─xyz_crop                # XYZ map
+    │  ├─bbox3d_and_center.txt      # 3D bbox and center point of object
+    │  ├─camera.txt                 # camera intrinsics
+    │  ├─fps_64.txt                 # The 64 keypoints on the object
+    │  ├─model.ply                  # Model of object
+    │  ├─test_2800.json             # Test dataset information in coco form
+    │  ├─train_400.json             # Train dataset information in coco form
     ├──#02(budui2)
     ├──#03(budui3)
     ├──#04(budui4)
@@ -30,6 +43,5 @@ and they correspond to numbers #01 to #10 one by one.
     ├──#09(mmmmm2)
     ├──#10(zhuixin)
     ├──#10(zhuixin)
-
-```
+    ├──models_info.json   # Contains information about the size of the object 
 ````
