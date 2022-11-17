@@ -42,6 +42,6 @@ The randomly generated object names are for easier data processing in dataset re
     ├──#08(mmmmm1)
     ├──#09(mmmmm2)
     ├──#10(zhuixin)
-    ├──#10(zhuixin)
+    ├──readme.md
     ├──models_info.json   # Contains information about the size of the object 
 ````
